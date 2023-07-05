@@ -1,29 +1,25 @@
 'use client';
 
 // Component(s)
-import Project from '../components/Project';
+import Post from '../components/Post';
 
 // Context(s)
-import { ProjectsContext } from '../context/ProjectsContext';
+import { PostsContext } from '../context/PostsContext';
 
 const Home = () => {
   return (
-    <ProjectsContext.Consumer>
+    <PostsContext.Consumer>
       {(value) => {
         return (
           <>
             <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-              {value?.projects?.map((project: any) => {
+              {value?.posts?.map((post: any) => {
                 return (
-                  <Project
-                    key={`project-${project?.projectId}`}
-                    projectId={project?.projectId}
-                    projectName={project?.projectName}
-                    projectDescription={project?.projectDescription}
-                    projectGifId={project?.projectGifId}
-                    projectGifName={project?.projectGifName}
-                    projectGifAlt={project?.projectGifAlt}
-                    projectGifUrl={project?.projectGifUrl}
+                  <Post
+                    key={`post-${post?.postId}`}
+                    postId={post?.postId}
+                    postTitle={post?.postTitle}
+                    postContent={post?.postContent}
                   />
                 );
               })}
@@ -31,7 +27,7 @@ const Home = () => {
           </>
         );
       }}
-    </ProjectsContext.Consumer>
+    </PostsContext.Consumer>
   );
 };
 

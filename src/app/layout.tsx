@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
-import Context from '../context/ProjectsContext';
+import Context from '../context/PostsContext';
 
 export const metadata = {
   title: 'Create Next App',
