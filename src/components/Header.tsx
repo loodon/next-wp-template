@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import Button from '@mui/material/Button';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Grow from '@mui/material/Grow';
 import Paper from '@mui/material/Paper';
@@ -29,7 +28,10 @@ export const Header = () => {
     openSet((prevOpen) => !prevOpen);
   };
 
-  const handleClose = (e: Event | React.SyntheticEvent, value: string) => {
+  const handleClose = (
+    e: Event | React.SyntheticEvent,
+    value: string | null
+  ) => {
     if (
       anchorRef.current &&
       anchorRef.current.contains(e.target as HTMLElement)
@@ -144,7 +146,9 @@ export const Header = () => {
                     }}
                   >
                     <Paper>
-                      <ClickAwayListener onClickAway={handleClose}>
+                      <ClickAwayListener
+                        onClickAway={(e) => handleClose(e, null)}
+                      >
                         <MenuList
                           autoFocusItem={open}
                           id='composition-menu'
