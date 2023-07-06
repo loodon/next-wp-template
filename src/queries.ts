@@ -11,3 +11,11 @@ query GetPosts {
   }
 }
 `;
+
+export const GetHeaderQuery = `
+query GetPosts {
+  header {
+    
+  }
+}
+`;

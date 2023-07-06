@@ -5,7 +5,6 @@ type PostItemType = {
 };
 
 const Post = ({ postId, postTitle, postContent }: PostItemType) => {
-  console.log(postContent?.includes('\n'));
   return (
     <>
       <div>
