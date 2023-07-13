@@ -14,6 +14,7 @@ const Home = () => {
           <>
             <main className='flex min-h-screen flex-col items-center justify-between p-24'>
               {value?.posts?.map((post: any) => {
+                console.log(post);
                 return (
                   <Post
                     key={`post-${post?.postId}`}

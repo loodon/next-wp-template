@@ -178,11 +178,15 @@ export const Header = () => {
                 variant='h6'
                 noWrap
                 component='div'
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                sx={{
+                  flex: 1,
+                  flexGrow: 1,
+                  display: { xs: 'none', sm: 'block' },
+                }}
               >
                 {title}
               </Typography>
-              <div>Logo</div>
+              <div className='flex-1'>Logo</div>
             </div>
 
             <Search>

@@ -7,7 +7,7 @@ type PostItemType = {
 const Post = ({ postId, postTitle, postContent }: PostItemType) => {
   return (
     <>
-      <div>
+      <div className='w-full text-white'>
         <h2>Post {postId}</h2>
         <div>Post Title: {postTitle}</div>
         <div style={{ whiteSpace: 'pre-line' }}>
